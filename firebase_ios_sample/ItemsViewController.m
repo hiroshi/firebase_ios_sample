@@ -20,6 +20,7 @@
         self.firebase = [[Firebase alloc] initWithUrl:urlString];
         [self.firebase on:FEventTypeChildAdded doCallback:^(FDataSnapshot *snapshot) {
             [self.items addObject:snapshot.val];
+            [self.tableView reloadData];
         }];
     }
     return self;
