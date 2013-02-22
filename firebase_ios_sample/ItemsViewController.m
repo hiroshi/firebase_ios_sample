@@ -16,7 +16,8 @@
     if (self) {
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
         self.items = [NSMutableArray array];
-        self.firebase = [[Firebase alloc] initWithUrl:@"https://pusceiver.firebaseio.com/"];
+        NSString *urlString = [NSString stringWithFormat:@"https://%@.firebaseio.com/", appname];
+        self.firebase = [[Firebase alloc] initWithUrl:urlString];
         [self.firebase on:FEventTypeChildAdded doCallback:^(FDataSnapshot *snapshot) {
             [self.items addObject:snapshot.val];
         }];
