@@ -16,6 +16,11 @@
 		6823490616D7391D00DFEEAF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6823490516D7391D00DFEEAF /* Default.png */; };
 		6823490816D7391D00DFEEAF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6823490716D7391D00DFEEAF /* Default@2x.png */; };
 		6823490A16D7391D00DFEEAF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6823490916D7391D00DFEEAF /* Default-568h@2x.png */; };
+		6823491216D7395100DFEEAF /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6823491116D7395100DFEEAF /* ItemsViewController.m */; };
+		6823491516D7398A00DFEEAF /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6823491416D7398A00DFEEAF /* Firebase.framework */; };
+		6823491716D739A200DFEEAF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6823491616D739A200DFEEAF /* Security.framework */; };
+		6823491916D739B700DFEEAF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6823491816D739B700DFEEAF /* CFNetwork.framework */; };
+		6823491B16D739CF00DFEEAF /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6823491A16D739CF00DFEEAF /* libicucore.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,12 @@
 		6823490516D7391D00DFEEAF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6823490716D7391D00DFEEAF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6823490916D7391D00DFEEAF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6823491016D7395100DFEEAF /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
+		6823491116D7395100DFEEAF /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
+		6823491416D7398A00DFEEAF /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = ../Firebase.framework; sourceTree = "<group>"; };
+		6823491616D739A200DFEEAF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6823491816D739B700DFEEAF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6823491A16D739CF00DFEEAF /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +53,10 @@
 				682348F416D7391D00DFEEAF /* UIKit.framework in Frameworks */,
 				682348F616D7391D00DFEEAF /* Foundation.framework in Frameworks */,
 				682348F816D7391D00DFEEAF /* CoreGraphics.framework in Frameworks */,
+				6823491516D7398A00DFEEAF /* Firebase.framework in Frameworks */,
+				6823491716D739A200DFEEAF /* Security.framework in Frameworks */,
+				6823491916D739B700DFEEAF /* CFNetwork.framework in Frameworks */,
+				6823491B16D739CF00DFEEAF /* libicucore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +66,7 @@
 		682348E716D7391D00DFEEAF = {
 			isa = PBXGroup;
 			children = (
+				6823491316D7397300DFEEAF /* Firebase */,
 				682348F916D7391D00DFEEAF /* firebase_ios_sample */,
 				682348F216D7391D00DFEEAF /* Frameworks */,
 				682348F116D7391D00DFEEAF /* Products */,
@@ -80,6 +96,8 @@
 			children = (
 				6823490216D7391D00DFEEAF /* AppDelegate.h */,
 				6823490316D7391D00DFEEAF /* AppDelegate.m */,
+				6823491016D7395100DFEEAF /* ItemsViewController.h */,
+				6823491116D7395100DFEEAF /* ItemsViewController.m */,
 				682348FA16D7391D00DFEEAF /* Supporting Files */,
 			);
 			path = firebase_ios_sample;
@@ -97,6 +115,17 @@
 				6823490916D7391D00DFEEAF /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6823491316D7397300DFEEAF /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				6823491A16D739CF00DFEEAF /* libicucore.dylib */,
+				6823491816D739B700DFEEAF /* CFNetwork.framework */,
+				6823491616D739A200DFEEAF /* Security.framework */,
+				6823491416D7398A00DFEEAF /* Firebase.framework */,
+			);
+			name = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +195,7 @@
 			files = (
 				6823490016D7391D00DFEEAF /* main.m in Sources */,
 				6823490416D7391D00DFEEAF /* AppDelegate.m in Sources */,
+				6823491216D7395100DFEEAF /* ItemsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +274,10 @@
 		6823490E16D7391D00DFEEAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "firebase_ios_sample/firebase_ios_sample-Prefix.pch";
 				INFOPLIST_FILE = "firebase_ios_sample/firebase_ios_sample-Info.plist";
@@ -255,6 +289,10 @@
 		6823490F16D7391D00DFEEAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "firebase_ios_sample/firebase_ios_sample-Prefix.pch";
 				INFOPLIST_FILE = "firebase_ios_sample/firebase_ios_sample-Info.plist";

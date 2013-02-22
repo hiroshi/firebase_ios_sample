@@ -1,12 +1,5 @@
-//
-//  AppDelegate.m
-//  firebase_ios_sample
-//
-//  Created by hiroshi on 2013/02/22.
-//  Copyright (c) 2013年 yakitara.com. All rights reserved.
-//
-
 #import "AppDelegate.h"
+#import "ItemsViewController.h"
 
 @implementation AppDelegate
 
@@ -14,7 +7,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ItemsViewController new]];
+    //self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
